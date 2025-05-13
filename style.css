@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+}
+
+h1{
+    margin: 0;
+    text-align: center;
+    background-color: #2387ca;
+    color: white;
+    padding: 30px;
+}
+
+
+/* Conteneur principal pour aligner le menu et les donateurs */
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 20px;
+}
+
+
+#filters {
+  width: 200px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+#filters a {
+  display: block;
+  padding: 15px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+#filters h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+#filters ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#filters li {
+  margin: 10px 0;
+}
+
+
+#filters a:hover {
+  background-color: #0056b3;
+}
+
+main{
+  width: 100%;
+}
+
+
+#donor-list {
+  display: grid; /* Transforme <main> en conteneur de grille */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /*Crée des colonnes flexibles, minimum 250px par carte */
+  gap: 20px;
+}
+
+
+/* Card des donateurs */
+.donor-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+  width: 250px;
+}
+
+.donor-card:hover {
+  transform: translateY(-5px);
+}
+
+.donor-card strong {
+  font-size: 1.2em;
+}
+
+.donor-card p {
+  margin: 10px 0;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
