@@ -6,6 +6,8 @@ fetch('https://randomuser.me/api/?results=50')
     const donors = data.results.map(donor => ({
       name: `${donor.name.first} ${donor.name.last}`,
       gender: donor.gender,
+      city: donor.location.city,
+      phone: donor.phone,
       amount: Math.floor(Math.random() * 100) + 1
     }));
 
@@ -21,9 +23,10 @@ function displayDonors(donors) {
     const div = document.createElement('div');
     div.className = 'donor-card';
     div.innerHTML = `
+      <p>${donor.amount} €</p>
       <strong>${donor.name}</strong>
-      <p>Genre : ${donor.gender}</p>
-      <p>Montant : $${donor.amount}</p>
+      <p>${donor.city}</p>
+      <p>${donor.phone}</p>
     `;
     container.appendChild(div);
   });
