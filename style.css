@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  background-color: #e4e7e8;
   color: #333;
   margin: 0;
 }
@@ -8,13 +8,12 @@ body {
 h1{
     margin: 0;
     text-align: center;
-    background-color: #2387ca;
+    background-color: #0077b6;
     color: white;
     padding: 30px;
 }
 
 
-/* Conteneur principal pour aligner le menu et les donateurs */
 .container {
   display: flex;
   flex-direction: row;
@@ -25,6 +24,7 @@ h1{
 
 #filters {
   width: 200px;
+  height: 420px;
   background-color: #fff;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -35,7 +35,7 @@ h1{
 #filters a {
   display: block;
   padding: 15px 20px;
-  background-color: #007bff;
+  background-color: #0077b6;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -71,16 +71,15 @@ main{
 
 
 #donor-list {
-  display: grid; /* Transforme <main> en conteneur de grille */
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /*Crée des colonnes flexibles, minimum 250px par carte */
   gap: 20px;
 }
 
 
-/* Card des donateurs */
 .donor-card {
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
